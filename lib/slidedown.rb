@@ -50,6 +50,7 @@ class SlideDown
     @raw = raw =~ /\A!SLIDE/ ? raw : "!SLIDE\n#{raw}"
     extract_classes!
 
+    p local_stylesheets
     self.stylesheets = opts[:stylesheets] || local_stylesheets
     self.title =       opts[:title]       || "Slides"
   end
